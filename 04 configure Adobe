@@ -1,0 +1,121 @@
+# Configure the SAP BTP Cloud Foundry
+
+# Environment Subaccount with SAP
+
+# Forms Service by Adobe
+
+## Purpose
+
+This section shows how to configure the SAP BTP, Cloud Foundry environment subaccount, and
+the SAP Forms service by Adobe. This service will be consumed later by the SAP BTP, Cloud
+Foundry environment subaccount.
+
+## Prerequisites
+
+You have a subaccount on SAP BTP, Cloud Foundry environment and the subaccount has
+entitlement of service Forms service by Adobe.
+
+## Procedure
+
+**Note : Please use Microsoft Edge Browser to do the configuration.**
+
+## 1, Create instance for ADS
+
+Enter BTP sub-account and create instance for **Form Service by Adobe**
+![alt text](image-37.png)
+![alt text](image-38.png)
+![alt text](image-39.png)
+
+
+Enter BTP sub-account and create instance for **Forms Service by Adobe API**
+![alt text](image-40.png)
+![alt text](image-41.png)
+![alt text](image-42.png)
+![alt text](image-43.png)
+
+
+
+
+Create key for **Forms Service by Adobe API** instance.
+![alt text](image-44.png)
+![alt text](image-45.png)
+![alt text](image-46.png)
+![alt text](image-47.png)
+![alt text](image-48.png)
+
+
+
+
+The ads rest api document URL: URI + /swagger-ui.html
+https://adsrestapi-formsprocessing.cfapps.eu10.hana.ondemand.com/swagger-ui.html
+![alt text](image-49.png)
+
+## 2. Assing user Role Collections
+![alt text](image-50.png)
+![alt text](image-51.png)
+
+
+## 3.Upload template file into Forms Service by Adobe
+
+### a .Copy address of Forms Service by Adobe
+![alt text](image-52.png)
+
+### b. The form template store URL is : a. url + /adsrestapi/ui.html
+
+https://apjcoe-x66183k9-ads.formsprocessing.cfapps.eu10.hana.ondemand.com/adsrestapi/ui.ht
+ml
+
+
+
+### c. create form in ADS.
+
+![alt text](image-53.png)
+![alt text](image-54.png)
+
+
+### d.download xdp temlate file from github in the following linkage :
+
+https://github.com/SAP-samples/s4hana-ext-cloud-label-printing/blob/main/PrintLabel.xdp
+
+
+### e. Upload the downloaded XDP template file into ADS
+![alt text](image-55.png)
+![alt text](image-56.png)
+![alt text](image-57.png)
+
+
+Now the xdp template has been created in ADS
+
+## 4, Create destination in BTP Cloud foundry Subaccount
+
+
+### a. retrieve the clientid,clientsecret,url,uri in 1
+
+![alt text](image-58.png)
+
+
+
+### b.Create destination in BTP Cloud foundry Subaccount
+
+
+![alt text](image-59.png)
+![alt text](image-60.png)
+```
+Name ads-rest-api
+Type HTTP
+Description Optional
+URL uri
+Proxy Type Internet
+Authentication OAuth2ClientCredentials
+Client ID clientid in a
+Client Secret clientsecret in a
+Token Service URL url in a + /oauth/token?grant_type=client_credentials
+Token Service User clientid in a
+Token Service Password clientsecret in a
+```
+![alt text](image-61.png)
+
+
+## The END
+
+
