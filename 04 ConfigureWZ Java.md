@@ -3,7 +3,7 @@
 - You have subscribed to SAP Build Work Zone, standard edition and assigned yourself to the Launchpad_Admin role
 
 
-Steps:
+### Steps:
 
 - Step 1, Refresh HTML5 Application in SAP Build Work Zone.
 ![alt text](image-14.png)

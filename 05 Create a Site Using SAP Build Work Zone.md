@@ -19,7 +19,7 @@ In this tutorial we'll create a site for a company called JobCore. We'll then ad
 
 When you access the SAP Build Work Zone, standard edition, the Site Directory is in focus. From here you'll create your new site.
 
-In the side panel, you'll see four tools. The Site Directory where you're going to create a new site. All sites that you create will be displayed here. The Content Manager where you'll manage cross-site content such as business apps. The Channel Manager where you manage different channels that expose business content that you can integrate into your sites. The fourth icon opens Settings where you can configure various settings related to your subaccount.
+In the side panel, you'll see four tools. The Site Directory where you're going to create a new site. All sites that you create will be displayed here. The Content Manager where you'll manage cross-site content such as business apps. The Channel Manager where you manage different channels that expose business content that you can integrate into your sites. The fourth icon opens Settings where you can configure various settings related to your BTP SubAccount.
 
 
 - 1, Click Create Site.
@@ -29,7 +29,7 @@ In the side panel, you'll see four tools. The Site Directory where you're going 
 - 2,Enter JobCore as the site name and click Create.
 ![alt text](image-66.png)
 
-You've just created a site called JobCore.
+You've created a site called JobCore.
 
 
 
